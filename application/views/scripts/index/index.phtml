@@ -1,0 +1,15 @@
+<?php
+
+
+//print_r($this->albumDetails);
+?>
+<table border="1">
+<?php
+foreach ($this->albumDetails as $details)
+{
+ echo "<tr><td>".$details['id']."</td><td><td>".$details['artist']."</td>"
+         . "<td>".$details['title']."</td><td><a href='".$this->baseUrl() ."/index/edit/id/". $details['id'] ."'>Edit</td>"
+         . "<td><a href='".$this->baseUrl() ."/index/delete/id/". $details['id'] ."'>Delete</td</tr>";
+}
+?>
+</table>

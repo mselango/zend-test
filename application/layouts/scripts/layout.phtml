@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>ZF1 project</title>
+         <?php echo $this->headLink()->appendStylesheet('/css/style.css')  ?>
+         <script type="text/javascript" src="/js/jquery-1.10.2.min.js"></script> 	
+        <script type="text/javascript" src="/js/jquery.validationEngine.js"></script>
+        <script type="text/javascript" src="/js/jquery.validationEngine-en.js"></script> 
+        <link rel="stylesheet" href="/css/validationEngine.jquery.css" type="text/css" charset="utf-8" />
+
+    </head>
+    <body>    
+        <h1>Header Content</h1>
+        <div id="message_box">
+            <?php echo isset($this->messages[0]) ? $this->messages[0] : ""; ?>
+        </div>  
+        <?php echo $this->layout()->content; ?>
+        <?php // echo $this->render('partials/footer.phtml'); ?>
+    </body>
+</html>

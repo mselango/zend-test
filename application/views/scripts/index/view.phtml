@@ -1,0 +1,22 @@
+<html>
+<body>
+<h1>Example</h1>
+<?php 
+echo $this->form;
+//echo "<pre>";
+//
+//
+//print_r($this->paginator);
+if (count($this->paginator)): ?>
+<ul>
+<?php foreach ($this->paginator as $item): ?>
+    <li><?php echo $item['id']."-".$item['artist'].'-'.$item['title']; ?></li>
+<?php endforeach; ?>
+</ul>
+<?php endif; ?>
+ 
+<?php echo $this->paginationControl($this->paginator,
+                                    'Elastic',
+                                    'pagination_controls.phtml'); ?>
+</body>
+</html>
